@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 5% auto;
+    padding: 10px;
+    font-family: "Noto Sans", sans-serif;
+    max-width: 768px;;
+    background: #f2f2f2;
+    color: #444444;
+    line-height: 1.8;
+}
+header {
+    margin-bottom: 30px;
+}
+.error404 {
+    text-align: center;
+}
+.error404 img {
+    width: 150px;
+    height: 150px;
+}
+a {
+    color: #229954;
+    text-decoration: none;
+}
+a:hover {
+    color: #2ab865;
+}
+header nav {
+    float: right;
+}
+nav {
+    color: #999;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+}
+nav a:hover {
+    color: #2ab865; 
+    border-bottom: 3px solid #2ab865;
+}
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #229954;
+}
+
+.post {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.post-title {
+    font-weight: 600;
+}
+.post-description {
+    margin: 0;
+    padding: 0;
+}
+.post hr {
+    width: 25%;
+}
+.date {
+    float: right;
+    color: #999;
+}
+footer {
+    color: #999;
+    font-size: 0.8em;
+    text-align: center;
+}
+article h1 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #229954;
+}
+.header-image {
+    max-width: 768px;
+    max-height: 150px;
+}

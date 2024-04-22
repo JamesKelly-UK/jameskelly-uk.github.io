@@ -1,0 +1,9 @@
+<footer>
+    <nav>
+        {{ range .Site.Menus.footer }}
+            {{ with .Pre }}{{ . }}{{ end }} <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        <br>
+        Powered by <a href="http://www.gohugo.io">Hugo</a> &#x2022; Theme by <a href="https://github.com/JamesKelly-UK">Me</a> &#x2022; License: <a href="#">CC BY-NC 4.0</a> 
+    </nav>
+</footer>

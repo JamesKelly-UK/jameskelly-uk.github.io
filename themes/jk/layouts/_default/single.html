@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article>
+    <small>{{ .Date | time.Format "2 January 2006"}} &#x2022; {{ .ReadingTime }} minutes &#x2022; {{ .WordCount }} Words</small>
+    <h1>{{ .Title }}</h1>
+    {{ if .Page.Params.header }}
+        <img class="header-image" src="header.png" alt="">
+    {{ end }}
+
+    <p>{{ .Content }}</p>
+</article>
+<b><a href="/">Go Back...</a></b>
+{{ end }}

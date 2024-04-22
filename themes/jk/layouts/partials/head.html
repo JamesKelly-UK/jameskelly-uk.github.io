@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+    {{ if .IsHome }}
+        {{ .Site.Title }} - My Digital Garden
+    {{ else if eq .Page.Title "404 Page not found" }}
+            {{ .Site.Title }} | Error 404
+    {{ else }}
+        {{ .Site.Title }} | {{ .Page.Title }}
+    {{ end }}
+</title>
+<link rel="stylesheet" href="/css/style.css">
