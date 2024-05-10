@@ -1,10 +1,12 @@
 {{ define "main" }}
 <main>
-{{ range ( where .Site.RegularPages "Type" "posts" | first 5 ) }}
-<section class="post">
-    <a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a><span class="date"> {{ .Date | time.Format "2 January 2006"}}</span>
-    <p class="post-description">{{ .Params.description }}</p>
+
+{{ range (.Paginate (where .Site.RegularPages "Type" "posts" )).Pages  }}
+<section class="list">
+    <a class="list-title" href="{{ .Permalink }}">{{ .Title }} {{ if .Params.categories }}{{range .Params.categories}}(<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>){{end}}{{end}}</a><span class="list-date"> {{ .Date | time.Format "2 January 2006"}}</span>
+    <p class="list-description">{{ .Params.description }}</p>
 </section>
 {{ end }}
+{{ template "_internal/pagination.html" . }}
 </main>
 {{ end }}

@@ -1,12 +1,25 @@
 {{ define "main" }}
 <article>
-    <small>{{ .Date | time.Format "2 January 2006"}} &#x2022; {{ .ReadingTime }} minutes &#x2022; {{ .WordCount }} Words</small>
+    <small>{{ if .Params.categories }}<strong>Category:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</small>
     <h1>{{ .Title }}</h1>
+    <small>{{ .Date | time.Format "2 January 2006"}} &#x2022; {{ .ReadingTime }} minutes &#x2022; {{ .WordCount }} Words</small>
+
+
+
+
+
+
+
     {{ if .Page.Params.header }}
         <img class="header-image" src="header.png" alt="">
     {{ end }}
 
+    {{- partial "seriesnotice.html" .}}
     <p>{{ .Content }}</p>
+    {{- partial "series.html" .}}
+
+
+
 </article>
-<b><a href="/">Go Back...</a></b>
+<span class="goTop"><b><a href="#top">Top</a></b></span>
 {{ end }}

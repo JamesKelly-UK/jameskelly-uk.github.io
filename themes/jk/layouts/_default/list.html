@@ -1,10 +1,15 @@
-{{ define "main "}}
+{{ define "main" }}
 <main>
-    {{ range .Pages }}
-        <section class="post">
-            <a class="post-title" href="#">{{ .Title }}</a><span class="date"> {{ .Date | time.Format ":date_medium"}}</span>
-            <p class="post-description">{{ .Params.description }}</p>
-        </section>
-    {{ end }}
+<section class="list"> 
+  <h2>{{.Title}}</h2>
+{{ range .Pages.GroupByDate "2006" "asc" }} 
+<h3>{{.Key}}</h3>
+  {{ range .Pages }}
+        <span><a class="list-title" href="{{ .Permalink }}">{{ .Title }} {{ if .Params.categories }}{{range .Params.categories}}(<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>){{end}}{{end}}</a> <small>{{ .Date | time.Format "2 January 2006"}}</small></span>
+        <br>
+  {{ end }}
+</ul>
+{{ end }}
+</section>
 </main>
 {{ end }}

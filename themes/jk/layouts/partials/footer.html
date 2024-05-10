@@ -6,4 +6,9 @@
         <br>
         Powered by <a href="http://www.gohugo.io">Hugo</a> &#x2022; Theme by <a href="https://github.com/JamesKelly-UK">Me</a> &#x2022; License: <a href="#">CC BY-NC 4.0</a> 
     </nav>
+
+    <strong>Categories: </strong>
+    {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+        <a href="{{.Permalink}}">{{.Title}}</a></li>
+    {{end}}
 </footer>

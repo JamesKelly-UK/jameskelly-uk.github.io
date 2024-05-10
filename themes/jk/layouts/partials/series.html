@@ -1,0 +1,19 @@
+{{- if .Params.series -}}
+  <div class="post-series">
+    <h3>{{ index .Params.series 0 }}</h3>
+    {{- $series := where .Site.RegularPages.ByDate ".Params.series" "intersect" .Params.series -}}
+    {{- with $series -}}
+    <ol>
+        {{- range . -}}
+        <li>
+            {{- if eq .File.UniqueID $.File.UniqueID -}}
+                <b class="series-current">{{ .Title }}</b>
+            {{- else -}}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{- end -}}
+        </li>
+        {{- end -}}
+    </ol>
+    {{- end -}}
+  </div>
+{{- end -}}

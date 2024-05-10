@@ -1,25 +1,29 @@
 baseURL = 'https://jameskelly-uk.github.io'
 languageCode = 'en-us'
-title = 'JamesKelly'
+title = 'James Kelly'
 theme = 'jk'
+paginate = 5
+
+[taxonomies]
+    tag = 'tags'
+    category = 'categories'
+    series = 'series'
 
 [menu]
 [[menu.main]]
-    name = 'Home'
-    url = '/'
-    weight = 10
-[[menu.main]]
     name = 'About'
     url = '/about'
-    weight = 15
+    weight = 10
+[[menu.main]]
+    name = 'Blog'
+    url = '/'
+    weight = 20
     pre = ' &#x2022 '
-# [[menu.main]]
-#     name = 'Projects'
-#     url = '/projects'
-#     weight = 20
-#     pre = ' &#x2022 '
-
-
+[[menu.main]]
+    name = 'Series'
+    url = '/series'
+    weight = 30
+    pre = ' &#x2022 '
 [[menu.footer]]
     name = 'LinkedIn'
     url = 'https://www.linkedin.com/in/james-kelly-27064332/'
@@ -29,8 +33,3 @@ theme = 'jk'
     url = 'https://github.com/JamesKelly-UK'
     pre = '&#x2022'
     weight = 20
-# [[menu.footer]]
-#     name = 'Mastodon'
-#     url = '#'
-#     pre = '&#x2022'
-#     weight = 30    
