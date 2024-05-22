@@ -43,11 +43,11 @@ Articulating the context of your task or issue is crucial for framing a well-str
 - What specific aspect isn't functioning as expected?
 - Have you gathered the necessary information mentioned in "Understand the Problem"?
 
-### 3. Be Specific
+### 3. Be Specific.
 
 Avoid vague inquiries like "Why isn't X working?" Instead, pinpoint the exact behavior, error messages, software versions, and the extent of the problem. Incorporate this information into your question to expedite the troubleshooting process.
 
-### 4. Demonstrate Effort:
+### 4. Demonstrate Effort.
 
 Displaying your efforts not only showcases your commitment to finding a solution but also prevents redundant suggestions.
 
@@ -55,16 +55,16 @@ Displaying your efforts not only showcases your commitment to finding a solution
 - Have you consulted any relevant solution guides or documentation?
 
 
-### 5. Follow Up
+### 5. Follow Up.
 
 Maintain open communication by updating all stakeholders on the outcome. Effective follow-up ensures everyone is aligned regarding progress and resolution.
 
 
-### 6. Share the Problem and the Resolution
+### 6. Share the Problem and the Resolution.
 
 Within a team setting, sharing both the problem and its resolution fosters knowledge-sharing and strengthens collaboration among team members.
 
-### 7. An Example Question
+### 7. An Example Question:
 
 Please find below an example question illustrating these principles, featuring a scenario where an internal webpage fails to load within a software system:
 
